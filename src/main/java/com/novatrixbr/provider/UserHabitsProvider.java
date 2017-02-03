@@ -41,4 +41,6 @@ public class UserHabitsProvider {
         return ResponseEntity.ok(habits);
     }
 
+
+
 }

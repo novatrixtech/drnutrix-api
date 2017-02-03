@@ -1,5 +1,7 @@
 package com.novatrixbr.model;
 
+import org.springframework.format.annotation.NumberFormat;
+
 import javax.persistence.*;
 import java.util.Calendar;
 
@@ -18,7 +20,7 @@ public class UserProfile {
     @Column(name = "up_weight")
     private double weight;
 
-    @Column(name = "up_height")
+    @Column(name = "up_height", precision = 10, scale = 2)
     private double height;
 
     @Column(name = "trg_id")
@@ -38,6 +40,9 @@ public class UserProfile {
 
     @Column(name = "up_specificdiet")
     private Long specificDiet;
+
+    @Column(name = "tpa_id")
+    private Long alergy;
 
     public Long getId() {
         return id;
@@ -103,6 +108,22 @@ public class UserProfile {
         this.user = user;
     }
 
+    public Long getSpecificDiet() {
+        return specificDiet;
+    }
+
+    public void setSpecificDiet(Long specificDiet) {
+        this.specificDiet = specificDiet;
+    }
+
+    public Long getAlergy() {
+        return alergy;
+    }
+
+    public void setAlergy(Long alergy) {
+        this.alergy = alergy;
+    }
+
     @Override
     public String toString() {
         return "UserProfile{" +
@@ -114,6 +135,8 @@ public class UserProfile {
                 ", age=" + age +
                 ", sex=" + sex +
                 ", user=" + user +
+                ", specificDiet=" + specificDiet +
+                ", alergy=" + alergy +
                 '}';
     }
 }

@@ -30,9 +30,6 @@ public class PredictionsProvider {
     @Autowired
     private DietsRepository dietsRepository;
 
-    @Autowired
-    private DietTypeRepository dietTypeRepository;
-
     @RequestMapping("/imc")
     public ResponseEntity getUserIMC(@PathVariable("userProfileId") Long userProfileId) {
         UserProfile userProfile = userProfileRespository.findByUserId(userProfileId);
