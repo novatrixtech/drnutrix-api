@@ -42,9 +42,7 @@ public class PredictionsProvider {
         UserProfile userProfile = userProfileRespository.findOne(userProfileId);
         double result = service.getImc(userProfile.getWeight(), userProfile.getHeight());
 
-        JsonParser parser = new JsonParser();
-        parser.parse("{'imc': " + result + "}");
-        return ResponseEntity.ok(parser);
+        return ResponseEntity.ok("{'imc': " + result + "}");
     }
 
     @RequestMapping("/energy")
