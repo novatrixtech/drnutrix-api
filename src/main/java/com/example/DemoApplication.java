@@ -10,14 +10,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @EnableAutoConfiguration
 public class DemoApplication {
 
-
-	@RequestMapping("/hello")
-	@ResponseBody
-	String home() {
-		return "Hello World!";
-	}
-
 	public static void main(String[] args) {
+
 		SpringApplication.run(DemoApplication.class, args);
 	}
 }
