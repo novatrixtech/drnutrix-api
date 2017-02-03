@@ -38,7 +38,7 @@ public class PredictionsProvider {
         UserProfile userProfile = userProfileRespository.findByUserId(userProfileId);
         int result = (int) service.getImc(userProfile.getWeight(), userProfile.getHeight());
 
-        return ResponseEntity.ok("{'imc': " + result + "}");
+        return ResponseEntity.ok("{\"imc\": " + result + "}");
     }
 
     @RequestMapping("/energy")
