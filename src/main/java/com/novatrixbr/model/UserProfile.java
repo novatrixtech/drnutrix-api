@@ -36,8 +36,8 @@ public class UserProfile {
     @Column(name = "usu_id")
     private Long user;
 
-    @Column(name = "diet_specificdiet")
-    private boolean specificDiet;
+    @Column(name = "up_specificdiet")
+    private int specificDiet;
 
     public Long getId() {
         return id;
