@@ -36,9 +36,6 @@ public class UserProfile {
     @Column(name = "usu_id")
     private Long user;
 
-    @Column(name = "up_specificdiet")
-    private int specificDiet;
-
     public Long getId() {
         return id;
     }
@@ -103,14 +100,6 @@ public class UserProfile {
         this.user = user;
     }
 
-    public int getSpecificDiet() {
-        return specificDiet;
-    }
-
-    public void setSpecificDiet(int specificDiet) {
-        this.specificDiet = specificDiet;
-    }
-
     @Override
     public String toString() {
         return "UserProfile{" +
@@ -122,7 +111,6 @@ public class UserProfile {
                 ", age=" + age +
                 ", sex=" + sex +
                 ", user=" + user +
-                ", specificDiet=" + specificDiet +
                 '}';
     }
 }
