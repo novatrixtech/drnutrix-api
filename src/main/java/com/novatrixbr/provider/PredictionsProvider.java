@@ -35,7 +35,7 @@ public class PredictionsProvider {
 
     @RequestMapping("/imc")
     public ResponseEntity getUserIMC(@PathVariable("userProfileId") Long userProfileId) {
-        UserProfile userProfile = userProfileRespository.findOne(userProfileId);
+        UserProfile userProfile = userProfileRespository.findByUserId(userProfileId);
         int result = (int) service.getImc(userProfile.getWeight(), userProfile.getHeight());
 
         return ResponseEntity.ok("{'imc': " + result + "}");
@@ -43,7 +43,7 @@ public class PredictionsProvider {
 
     @RequestMapping("/energy")
     public ResponseEntity getEnergyPrediction(@PathVariable("userProfileId") Long userProfileId) {
-        UserProfile userProfile = userProfileRespository.findOne(userProfileId);
+        UserProfile userProfile = userProfileRespository.findByUserId(userProfileId);
         Target userTarget = targetRepository.findOne(userProfile.getTarget());
 
         if (userTarget != null) {
