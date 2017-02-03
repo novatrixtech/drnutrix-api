@@ -36,6 +36,9 @@ public class UserProfile {
     @Column(name = "usu_id")
     private Long user;
 
+    @Column(name = "up_specificdiet")
+    private Long specificDiet;
+
     public Long getId() {
         return id;
     }

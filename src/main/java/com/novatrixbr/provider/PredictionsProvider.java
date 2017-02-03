@@ -37,7 +37,7 @@ public class PredictionsProvider {
     public ResponseEntity getUserIMC(@PathVariable("userProfileId") Long userProfileId) {
         UserProfile userProfile = userProfileRespository.findOne(userProfileId);
         int result = (int) service.getImc(userProfile.getWeight(), userProfile.getHeight());
-        
+
         return ResponseEntity.ok("{'imc': " + result + "}");
     }
 
@@ -49,7 +49,7 @@ public class PredictionsProvider {
         if (userTarget != null) {
             int predictedEnergyIngestion
                     = service.getEnergyIngestion(userProfile.getWeight(), userTarget.getValue());
-
+//            String response = "{'energy': " + predictedEnergyIngestion + "}";
             return ResponseEntity.ok(predictedEnergyIngestion);
         }
         return ResponseEntity.unprocessableEntity().build();
