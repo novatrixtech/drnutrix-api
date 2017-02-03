@@ -1,4 +1,4 @@
-package com.example.model;
+package com.novatrixbr.model;
 
 
 import javax.persistence.*;

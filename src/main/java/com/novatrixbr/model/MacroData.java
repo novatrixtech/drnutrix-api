@@ -1,4 +1,4 @@
-package com.example.model;
+package com.novatrixbr.model;
 
 /**
  * Created by bruno on 2/2/17.

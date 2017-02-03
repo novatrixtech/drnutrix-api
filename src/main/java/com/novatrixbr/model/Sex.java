@@ -1,22 +1,21 @@
-package com.example.model;
+package com.novatrixbr.model;
 
 import javax.persistence.*;
-import java.util.List;
 
 /**
- * Created by bruno on 2/1/17.
+ * Created by bruno on 2/2/17.
  */
 
 @Entity
-@Table(name = "type")
-public class FoodType {
+@Table(name = "sex")
+public class Sex {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "typ_id")
+    @Column(name = "sex_id")
     private Long id;
 
-    @Column(name = "typ_desc")
+    @Column(name = "sex_description")
     private String description;
 
     public Long getId() {
@@ -37,7 +36,7 @@ public class FoodType {
 
     @Override
     public String toString() {
-        return "FoodType{" +
+        return "Sex{" +
                 "id=" + id +
                 ", description='" + description + '\'' +
                 '}';

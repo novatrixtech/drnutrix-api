@@ -1,21 +1,21 @@
-package com.example.model;
+package com.novatrixbr.model;
 
 import javax.persistence.*;
+import java.util.List;
 
 /**
- * Created by bruno on 2/2/17.
+ * Created by bruno on 2/1/17.
  */
 
 @Entity
-@Table(name = "sex")
-public class Sex {
+@Table(name = "grp")
+public class Group {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "sex_id")
     private Long id;
 
-    @Column(name = "sex_description")
+    @Column(name = "description")
     private String description;
 
     public Long getId() {
@@ -36,7 +36,7 @@ public class Sex {
 
     @Override
     public String toString() {
-        return "Sex{" +
+        return "Group{" +
                 "id=" + id +
                 ", description='" + description + '\'' +
                 '}';
