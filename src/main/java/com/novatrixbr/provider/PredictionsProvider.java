@@ -1,9 +1,5 @@
 package com.novatrixbr.provider;
 
-import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 import com.novatrixbr.model.*;
 import com.novatrixbr.repository.DietTypeRepository;
 import com.novatrixbr.repository.DietsRepository;
@@ -40,8 +36,8 @@ public class PredictionsProvider {
     @RequestMapping("/imc")
     public ResponseEntity getUserIMC(@PathVariable("userProfileId") Long userProfileId) {
         UserProfile userProfile = userProfileRespository.findOne(userProfileId);
-        double result = service.getImc(userProfile.getWeight(), userProfile.getHeight());
-
+        int result = (int) service.getImc(userProfile.getWeight(), userProfile.getHeight());
+        
         return ResponseEntity.ok("{'imc': " + result + "}");
     }
 
