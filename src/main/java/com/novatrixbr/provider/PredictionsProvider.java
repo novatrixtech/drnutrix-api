@@ -44,15 +44,15 @@ public class PredictionsProvider {
     @RequestMapping("/energy")
     public ResponseEntity getEnergyPrediction(@PathVariable("userProfileId") Long userProfileId) {
         UserProfile userProfile = userProfileRespository.findByUserId(userProfileId);
-        Target userTarget = targetRepository.findOne(userProfile.getTarget());
 
-        if (userTarget != null) {
+        if (userProfile.getTarget() != null) {
+            Target userTarget = targetRepository.findOne(userProfile.getTarget());
             int predictedEnergyIngestion
                     = service.getEnergyIngestion(userProfile.getWeight(), userTarget.getValue());
-//            String response = "{'energy': " + predictedEnergyIngestion + "}";
-            return ResponseEntity.ok(predictedEnergyIngestion);
+            String response = "{\n\t'energy': " + predictedEnergyIngestion + "\n}";
+            return ResponseEntity.ok(response);
         }
-        return ResponseEntity.unprocessableEntity().build();
+        return ResponseEntity.badRequest().body("{ \n\terror: a target is required to process this operation\n }");
     }
 
     @RequestMapping(value = "/macro", method = RequestMethod.POST)
