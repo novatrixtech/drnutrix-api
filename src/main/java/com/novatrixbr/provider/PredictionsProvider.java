@@ -36,7 +36,7 @@ public class PredictionsProvider {
     @RequestMapping("/imc")
     public ResponseEntity getUserIMC(@PathVariable("userProfileId") Long userProfileId) {
         UserProfile userProfile = userProfileRespository.findByUserId(userProfileId);
-        int result = (int) service.getImc(userProfile.getWeight(), userProfile.getHeight());
+        int result = service.getImc(userProfile.getWeight(), userProfile.getHeight());
 
         return ResponseEntity.ok("{\"imc\": " + result + "}");
     }

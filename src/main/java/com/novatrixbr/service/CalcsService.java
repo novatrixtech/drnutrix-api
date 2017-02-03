@@ -10,9 +10,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class CalcsService {
 
-    public double getImc(double weight, double height) {
+    public int getImc(double weight, double height) {
         double squaredHeight = height*height;
-        return weight / squaredHeight;
+        return (int) Math.round(weight / squaredHeight);
     }
 
     public int getEnergyIngestion(double weight, int coeficient) {
