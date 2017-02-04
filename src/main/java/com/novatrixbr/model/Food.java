@@ -21,31 +21,31 @@ public class Food {
     private String measure;
 
     @Column(name = "qty")
-    private int quantity;
+    private String quantity;
 
     @Column(name = "energy")
-    private double energy;
+    private String energy;
 
     @Column(name = "ptn")
-    private double ptn;
+    private String ptn;
 
     @Column(name = "cho")
-    private double cho;
+    private String cho;
 
     @Column(name = "lip")
-    private double lip;
+    private String lip;
 
     @Column(name = "ca")
-    private double ca;
+    private String ca;
 
     @Column(name = "fe")
-    private double fe;
+    private String fe;
 
     @Column(name = "vit_c")
-    private double vitC;
+    private String vitC;
 
     @Column(name = "vit_a")
-    private double vitA;
+    private String vitA;
 
     @Column(name = "typ_id")
     private Long type;
@@ -77,75 +77,75 @@ public class Food {
         this.measure = measure;
     }
 
-    public int getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(int quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 
-    public double getEnergy() {
+    public String getEnergy() {
         return energy;
     }
 
-    public void setEnergy(double energy) {
+    public void setEnergy(String energy) {
         this.energy = energy;
     }
 
-    public double getPtn() {
+    public String getPtn() {
         return ptn;
     }
 
-    public void setPtn(double ptn) {
+    public void setPtn(String ptn) {
         this.ptn = ptn;
     }
 
-    public double getCho() {
+    public String getCho() {
         return cho;
     }
 
-    public void setCho(double cho) {
+    public void setCho(String cho) {
         this.cho = cho;
     }
 
-    public double getLip() {
+    public String getLip() {
         return lip;
     }
 
-    public void setLip(double lip) {
+    public void setLip(String lip) {
         this.lip = lip;
     }
 
-    public double getCa() {
+    public String getCa() {
         return ca;
     }
 
-    public void setCa(double ca) {
+    public void setCa(String ca) {
         this.ca = ca;
     }
 
-    public double getFe() {
+    public String getFe() {
         return fe;
     }
 
-    public void setFe(double fe) {
+    public void setFe(String fe) {
         this.fe = fe;
     }
 
-    public double getVitC() {
+    public String getVitC() {
         return vitC;
     }
 
-    public void setVitC(double vitC) {
+    public void setVitC(String vitC) {
         this.vitC = vitC;
     }
 
-    public double getVitA() {
+    public String getVitA() {
         return vitA;
     }
 
-    public void setVitA(double vitA) {
+    public void setVitA(String vitA) {
         this.vitA = vitA;
     }
 

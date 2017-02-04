@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import java.io.File;
 import java.net.URI;
 import java.util.List;
 
@@ -41,6 +42,10 @@ public class UserHabitsProvider {
         return ResponseEntity.ok(habits);
     }
 
-
+//    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+//    public ResponseEntity getCSVUserData(@PathVariable("id") long userId) {
+//        File file = repository.getHabitsByUserInCSV(userId);
+//        return ResponseEntity.ok(file);
+//    }
 
 }
