@@ -46,7 +46,7 @@ public class PredictionsProvider {
             Target userTarget = targetRepository.findOne(userProfile.getTarget());
             int predictedEnergyIngestion
                     = service.getEnergyIngestion(userProfile.getWeight(), userTarget.getValue());
-            String response = "{\n\t'energy': " + predictedEnergyIngestion + "\n}";
+            String response = "{\n\t\"energy\": " + predictedEnergyIngestion + "\n}";
             return ResponseEntity.ok(response);
         }
         return ResponseEntity.badRequest().body("{ \n\terror: a target is required to process this operation\n }");
@@ -75,7 +75,7 @@ public class PredictionsProvider {
 
             return ResponseEntity.ok(data);
         } else if (userDiet.getDiet() == 3) {
-            //TODO: get carbs, proteins, lipidis provided by user
+            //TODO: get carbs, proteins, lipids provided by user
         }
 
         return ResponseEntity.unprocessableEntity().build();

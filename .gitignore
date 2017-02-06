@@ -17,7 +17,7 @@ target/
 
 
 ### Spring ###
-
+application.properties
 
 ### NetBeans ###
 nbproject/private/

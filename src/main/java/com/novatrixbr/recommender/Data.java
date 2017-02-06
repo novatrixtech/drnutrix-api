@@ -1,6 +1,5 @@
 package com.novatrixbr.recommender;
 
-import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
 import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
 import org.apache.mahout.cf.taste.model.DataModel;
